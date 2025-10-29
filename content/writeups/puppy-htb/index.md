@@ -374,4 +374,4 @@ Username    : steph.cooper_adm
 Unknown     : FivethChipOnItsWay2025!
 ```
 
-Com isso adquirimos a senha do admin local. Podemos logar e pegar a root.txt
+Com isso adquirimos a senha do admin local. Podemos logar e pegar a root.txt.
