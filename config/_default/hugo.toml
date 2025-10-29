@@ -3,7 +3,7 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = "blowfish" # UNCOMMENT THIS LINE
-baseURL = "https://richard-natan.github.io/CatOverflow/"
+baseURL = "https://richard-natan.github.io/CatOverflow"
 defaultContentLanguage = "pt-br"
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
@@ -47,7 +47,7 @@ enableEmoji = true
         weight = 100
 
     [[related.indices]]
-        name = "categories"
+        name = "1tegories"
         weight = 100
 
     [[related.indices]]
