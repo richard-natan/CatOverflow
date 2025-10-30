@@ -2,7 +2,6 @@
 title: "Puppy - HTB"
 date: 2025-10-27
 summary: "As is common in real life pentests, you will start the Puppy box with credentials for the following account: levi.james / KingofAkron2025!"
-publishDate: 2025-10-27
 layout: "single"
 tags: ["Windows", "Medium", "HTB"]
 ---
@@ -81,10 +80,7 @@ SMB         10.10.11.70     445    DC               SYSVOL          READ        
 
 Notamos que a share `DEV` é uma share fora do padrão de máquinas Windows, então ficaremos de olho nisso, porém por hora não temos acesso a ela.
 
-Agora o que resta é enumerar o AD completo, e para isso estarei usando o 
-
-
-Enumeração do Active Directory utilizando o [bloodhound-python](https://github.com/dirkjanm/BloodHound.py):
+Agora o que resta é enumerar o AD completo, e para isso estarei usando o [bloodhound-python](https://github.com/dirkjanm/BloodHound.py):
 
 ```bash
 bloodhound-python -u 'levi.james' -p 'KingofAkron2025!' --zip -c ALL -ns 10.10.11.70 -d PUPPY.HTB
