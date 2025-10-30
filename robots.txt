@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://richard-natan.github.io/CatOverflow/sitemap.xml
