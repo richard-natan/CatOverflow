@@ -82,7 +82,7 @@ Valid starting       Expires              Service principal
 
 ```
 {{< alert >}}
-**Sempre que o NTLM do AD estiver desabilitado e precisar utilizar tickets TGT, SEMPRE UTILIZE O HOST COM `DC.DOMINIO.HTB` pois o Kerberos só trabalha com DNS!**
+**Sempre que o NTLM do AD estiver desabilitado e precisar utilizar tickets TGT/TGS, SEMPRE UTILIZE O HOST COM `DC.DOMINIO.HTB` pois o Kerberos só trabalha com DNS!**
 {{< /alert >}}
 
 Com esse TGT, podemos finalmente acessar as shares SMB usando o [Netexec](https://www.netexec.wiki/):
@@ -93,7 +93,7 @@ SMB         dc.rustykey.htb 445    dc               [*]  x64 (name:dc) (domain:r
 SMB         dc.rustykey.htb 445    dc               [-] rustykey.htb\rr.parker:8#t5HE8L!W3A KRB_AP_ERR_SKEW 
 ```
 
-Porém nos deparamos com o erro `KRB_AP_ERR_SKEW`, esse erro sempre acontece quando o horário da sua máquina está diferente do horário Kerberos. Tem várias maneiras de corrigir isso, no meu caso estarei usando o [Faketime](https://packages.debian.org/sid/faketime):
+Porém nos deparamos com o erro `KRB_AP_ERR_SKEW`, esse erro sempre acontece quando o horário da sua máquina está diferente do horário do Kerberos. Tem várias maneiras de corrigir isso, no meu caso estarei usando o [Faketime](https://packages.debian.org/sid/faketime):
 ```bash
 faketime "$(rdate -n $DC_IP -p | awk '{print $2, $3, $4}' | date -f - "+%Y-%m-%d %H:%M:%S")" zsh
 ```
