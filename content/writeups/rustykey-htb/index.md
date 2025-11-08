@@ -1,6 +1,6 @@
 ---
 title: "RustyKey - HTB"
-date: 2025-10-29
+date: 2025-11-08
 summary: "As is common in real life Windows pentests, you will start the RustyKey box with credentials for the following account: rr.parker / 8#t5HE8L!W3A"
 layout: "single"
 tags: ["Windows", "Hard", "HTB"]
